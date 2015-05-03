@@ -8,6 +8,31 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+nav {
+    background: rgba(77, 2, 133, 0.9);
+    color: #fff;
+    left: 0;
+    height: 52px;
+    line-height: 52px;
+    padding: 0 10px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+
+
+    .hamburger {
+        margin: 10px 0 0 0;
+        .draw-path { @include animation-duration(0.5s) }
+        .delay-1 { @include animation-delay(0.3s) }
+        .delay-2 { @include animation-delay(0.6s) }
+    }
+
+    .lang {
+        float: right;
+    }
+}
+
 .block {
     background-attachment: fixed;
     background-size: cover;
@@ -69,11 +94,11 @@ body {
     background-image: url("/images/mountains.jpg");
 }
 
-.draw-triangle {
-    @include animation(draw-triangle 3s linear forwards);
+.draw-path {
+    @include animation(draw-path 3s linear forwards);
 }
 
-@include keyframes(draw-triangle) {
+@include keyframes(draw-path) {
     100% {
         stroke-dashoffset: 0
     }
