@@ -1,7 +1,8 @@
-@import "compass";
+@import "vars";
 
 body {
     background: #4d0285;
+    color: #fff;
     font: 300 16px "Open Sans", Helvetica, Arial;
     margin: 0;
     padding: 0;
@@ -36,7 +37,8 @@ nav {
 .block {
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    text-align: center;
 }
 
 .vcenter-outer {
@@ -51,11 +53,24 @@ nav {
     vertical-align: middle;
 }
 
+.separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.line {
+    border-bottom: 1px solid #fff;
+    margin: 0 auto;
+    width: 80px;
+}
+
 #content1 {
     background-image: url("/images/mountains.jpg");
+    height: 100vh;
 
     h1 {
-        color: #fff;
         font-weight: 400;
         font-size: 28px;
         margin: 10px 0;
@@ -67,7 +82,6 @@ nav {
     }
 
     h2 {
-        color: #fff;
         font-weight: 300;
         font-size: 20px;
         margin: 10px 0;
@@ -75,7 +89,48 @@ nav {
 }
 
 #content2 {
-    background-image: url("/images/mountains2.jpg");
+    background: #37c8ca;
+    padding: 30px 0;
+
+    h1 {
+        font-weight: 400;
+        font-size: 24px;
+        text-align: center;
+    }
+    h2 {
+        color: #175375;
+        font-size: 28px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .desc {
+        margin: 20px 0;
+        font-weight: 400;
+        padding: 0 40px;
+    }
+    .mobile {
+        position: relative;
+        margin: 0 auto;
+        width: 320px;
+        @include respond-to(mobile) {
+            width: 200px;
+        }
+
+        .screen {
+            @include animation(scroll-up 4s 2s ease-in-out forwards);
+            background: url("/images/askmen-iphone6-content.jpg") no-repeat center 0;
+            @include background-size(100%);
+            bottom: 16%;
+            left: 15.7%;
+            position: absolute;
+            right: 15.7%;
+            top: 21.1%;
+
+            @include respond-to(mobile) {
+                right: 15.7%;
+            }
+        }
+    }
 }
 
 #content3 {
@@ -106,15 +161,16 @@ nav {
 
 .float-up {
     @include animation(float-up 1s ease-out forwards);
-    @include filter(blur(2px));
     display: inline-block;
     @include opacity(0);
     @include transform(translate3d(0, 20px, 0));
+    &.large {
+        @include transform(translate3d(0, 50px, 0));
+    }
 }
 
 @include keyframes(float-up) {
     100% {
-        @include filter(none);
         @include opacity(1);
         @include transform(translate3d(0, 0, 0));
     }
@@ -123,3 +179,15 @@ nav {
 .delay-1 { @include animation-delay(1s) }
 .delay-2 { @include animation-delay(2s) }
 .delay-3 { @include animation-delay(3s) }
+
+@include keyframes(scroll-up) {
+    0% {
+        background-position: center 0;
+    }
+    50% {
+        background-position: center 100%;
+    }
+    100% {
+        background-position: center 0;
+    }
+}
