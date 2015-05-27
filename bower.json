@@ -1,0 +1,23 @@
+{
+  "name": "anthony",
+  "version": "1.0.0",
+  "homepage": "https://github.com/anthonymeneg/anthonymeneg.github.io",
+  "authors": [
+    "Istvan Pusztai <istvanp@gmail.com>"
+  ],
+  "description": "Anthony's protfolio",
+  "main": [
+    "js/main.js",
+    "css/main.css"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "stellar": "~0.6.2",
+    "jquery": "~2.1.4",
+    "waypoints": "~3.1.1"
+  }
+}

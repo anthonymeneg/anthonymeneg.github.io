@@ -1,0 +1,27 @@
+{
+  "name": "anthony",
+  "version": "1.0.0",
+  "description": "Anthony's portfolio",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bower-concat": "^0.5.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-uglify": "^0.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthonymeneg/anthonymeneg.github.io.git"
+  },
+  "author": "Istvan Pusztai <istvanp@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/anthonymeneg/anthonymeneg.github.io/issues"
+  },
+  "homepage": "https://github.com/anthonymeneg/anthonymeneg.github.io"
+}

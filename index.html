@@ -28,9 +28,9 @@
                             stroke-dasharray="360" stroke-dashoffset="360" d="M0,120 L60,16.076951546 L120,120 Z"/>
                         </svg>
                         <h1>
-                            <span class="float-up">Design</span>
-                            <span class="float-up delay-1">Branding</span>
-                            <span class="float-up delay-2">Triangulation</span>
+                            <span class="float-up animate">Design</span>
+                            <span class="float-up animate delay-1">Branding</span>
+                            <span class="float-up animate delay-2">Triangulation</span>
                         </h1>
                         <h2 class="float-up delay-3">Anthony Meneghini-Cuvillier</h2>
                     </div>
@@ -50,9 +50,11 @@
                 <div class="desc">
                     AskMen is the No. 1 site to help men improve their lives&mdash;from discovering new products &amp; trends to getting advice on dating, fitness, grooming &amp; more.
                 </div>
-                <div class="mobile float-up large">
-                    <img src="/images/askmen-iphone6.png" alt="AskMen.com on mobile" width="100%" />
-                    <div class="screen"></div>
+                <div id="content-2-animations">
+                    <div class="mobile float-up paused delay-1 large">
+                        <img src="/images/askmen-iphone6.png" alt="AskMen.com on mobile" width="100%" />
+                        <div class="screen paused"></div>
+                    </div>
                 </div>
             </div>
             <div class="block" id="content3" data-stellar-background-ratio="0.5">
@@ -68,9 +70,8 @@
                 
             </div>
         </main>
-        <script src="js/jquery-1.11.2.min.js"></script>
-        <script src="js/jquery.stellar.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/vendor.bundle.js"></script>
+        <script src="js/init.js"></script>
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

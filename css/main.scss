@@ -117,7 +117,6 @@ nav {
         }
 
         .screen {
-            @include animation(scroll-up 4s 2s ease-in-out forwards);
             background: url("/images/askmen-iphone6-content.jpg") no-repeat center 0;
             @include background-size(100%);
             bottom: 16%;
@@ -128,6 +127,9 @@ nav {
 
             @include respond-to(mobile) {
                 right: 15.7%;
+            }
+            &.animate {
+                @include animation(scroll-up 4s 2s ease-in-out forwards);
             }
         }
     }
@@ -160,10 +162,12 @@ nav {
 }
 
 .float-up {
-    @include animation(float-up 1s ease-out forwards);
     display: inline-block;
     @include opacity(0);
     @include transform(translate3d(0, 20px, 0));
+    &.animate {
+        @include animation(float-up 1s ease-out forwards);
+    }
     &.large {
         @include transform(translate3d(0, 50px, 0));
     }
@@ -176,9 +180,9 @@ nav {
     }
 }
 
-.delay-1 { @include animation-delay(1s) }
-.delay-2 { @include animation-delay(2s) }
-.delay-3 { @include animation-delay(3s) }
+.delay-1 { @include animation-delay(1s !important) }
+.delay-2 { @include animation-delay(2s !important) }
+.delay-3 { @include animation-delay(3s !important) }
 
 @include keyframes(scroll-up) {
     0% {
