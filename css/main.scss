@@ -131,7 +131,10 @@ nav {
 
     .mobile {
         margin: 0 auto;
-        width: 320px;
+        max-width: 110px;
+        top: 70px;
+        z-index: 10;
+
         @include respond-to(mobile) {
             width: 200px;
         }
@@ -148,9 +151,12 @@ nav {
             }
         }
     }
+
     .laptop {
+        bottom: 20px;
         margin: 0 auto;
-        width: 640px;
+        max-width: 360px;
+        right: 100px;
 
         @include respond-to(mobile) {
             width: 200px;
@@ -170,10 +176,11 @@ nav {
     }
     .desktop {
         margin: 0 auto;
-        width: 1000px;
+        max-width: 400px;
+        left: 70px;
 
         @include respond-to(mobile) {
-            width: 200px;
+            max-width: 200px;
         }
 
         .screen {
