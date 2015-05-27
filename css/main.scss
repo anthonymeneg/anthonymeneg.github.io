@@ -162,7 +162,26 @@ nav {
             left: 17.6%;
             right: 17.6%;
             top: 16.6%;
-            z-index: 0;
+
+            @include respond-to(mobile) {
+                right: 15.7%;
+            }
+        }
+    }
+    .desktop {
+        margin: 0 auto;
+        width: 1000px;
+
+        @include respond-to(mobile) {
+            width: 200px;
+        }
+
+        .screen {
+            background-image: url("/images/askmen-imac-content.jpg");
+            bottom: 32%;
+            left: 10%;
+            right: 10%;
+            top: 13%;
 
             @include respond-to(mobile) {
                 right: 15.7%;
