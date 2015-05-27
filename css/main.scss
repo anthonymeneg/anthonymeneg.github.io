@@ -108,8 +108,28 @@ nav {
         font-weight: 400;
         padding: 0 40px;
     }
-    .mobile {
+
+    .mobile, .laptop, .desktop {
         position: relative;
+
+        img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .screen {
+            background: no-repeat center 0;
+            @include background-size(cover);
+            position: absolute;
+            z-index: 0;
+
+            &.animate {
+                @include animation(scroll-up 4s 2s ease-in-out forwards);
+            }
+        }
+    }
+
+    .mobile {
         margin: 0 auto;
         width: 320px;
         @include respond-to(mobile) {
@@ -117,19 +137,35 @@ nav {
         }
 
         .screen {
-            background: url("/images/askmen-iphone6-content.jpg") no-repeat center 0;
-            @include background-size(100%);
+            background-image: url("/images/askmen-iphone6-content.jpg");
             bottom: 16%;
             left: 15.7%;
-            position: absolute;
             right: 15.7%;
             top: 21.1%;
 
             @include respond-to(mobile) {
                 right: 15.7%;
             }
-            &.animate {
-                @include animation(scroll-up 4s 2s ease-in-out forwards);
+        }
+    }
+    .laptop {
+        margin: 0 auto;
+        width: 640px;
+
+        @include respond-to(mobile) {
+            width: 200px;
+        }
+
+        .screen {
+            background-image: url("/images/askmen-macbook-content.jpg");
+            bottom: 17.3%;
+            left: 17.6%;
+            right: 17.6%;
+            top: 16.6%;
+            z-index: 0;
+
+            @include respond-to(mobile) {
+                right: 15.7%;
             }
         }
     }

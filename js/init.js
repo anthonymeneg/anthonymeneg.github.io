@@ -19,6 +19,6 @@ $(function() {
         handler: function(direction) {
             $(this.element).find('.paused').removeClass('paused').addClass('animate');
         },
-        offset: '40%'
+        offset: '80%'
     });
 });
