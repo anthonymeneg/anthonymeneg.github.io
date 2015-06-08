@@ -9,6 +9,11 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+a, a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
 nav {
     background: rgba(77, 2, 133, 0.9);
     color: #fff;
@@ -34,10 +39,17 @@ nav {
     }
 }
 
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .block {
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
+    position: relative;
     text-align: center;
 }
 
@@ -66,6 +78,15 @@ nav {
     width: 80px;
 }
 
+.rotate span {
+    display: inline-block;
+    @include transition(transform 150ms);
+}
+
+.rotate:hover span {
+    @include transform(rotate(90deg));
+}
+
 #content1 {
     background-image: url("/images/mountains.jpg");
     height: 100vh;
@@ -90,10 +111,12 @@ nav {
 
 #content2 {
     background: #37c8ca;
-    padding: 30px 0;
+    padding: 30px 0 0 0;
+    line-height: 0;
 
     h1 {
         font-weight: 400;
+        line-height: 1.25em;
         font-size: 24px;
         text-align: center;
     }
@@ -101,9 +124,11 @@ nav {
         color: #175375;
         font-size: 28px;
         font-weight: 400;
+        line-height: 1.15em;
         text-align: center;
     }
     .desc {
+        line-height: 1.15em;
         margin: 20px 0;
         font-weight: 400;
         padding: 0 40px;
@@ -130,8 +155,8 @@ nav {
     }
 
     .mobile {
-        margin: 0 auto;
-        max-width: 110px;
+        margin: 0 auto 70px auto;
+        max-width: 10%;
         top: 70px;
         z-index: 10;
 
@@ -155,8 +180,8 @@ nav {
     .laptop {
         bottom: 20px;
         margin: 0 auto;
-        max-width: 360px;
-        right: 100px;
+        max-width: 35%;
+        right: 10%;
 
         @include respond-to(mobile) {
             width: 200px;
@@ -176,8 +201,8 @@ nav {
     }
     .desktop {
         margin: 0 auto;
-        max-width: 400px;
-        left: 70px;
+        max-width: 40%;
+        left: 7%;
 
         @include respond-to(mobile) {
             max-width: 200px;
@@ -195,18 +220,37 @@ nav {
             }
         }
     }
+
+    #content-2-mobile {
+        .img {
+            vertical-align: middle;
+        }
+        img {
+            width: 100%;
+        }
+        .img1, .img4 {
+            width: 16%;
+        }
+        .img2, .img3 {
+            margin: 0 1%;
+            width: 20%;
+        }
+    }
+
+    .visit {
+        margin: 40px 0 0 0;
+    }
 }
 
 #content3 {
-    background-image: url("/images/mountains3.jpg");
+    background: #232323;
 }
 
 #content4 {
-    background-image: url("/images/beach.jpg");
+    background: #50dcba;
 }
 
 #content5 {
-    background-image: url("/images/timelapse.jpg");
 }
 
 #content6 {

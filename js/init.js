@@ -14,8 +14,15 @@ $.stellar({
 });
 
 $(function() {
-    var content2 = new Waypoint({
+    var content2_1 = new Waypoint({
         element: document.getElementById('content-2-animations'),
+        handler: function(direction) {
+            $(this.element).find('.paused').removeClass('paused').addClass('animate');
+        },
+        offset: '80%'
+    }),
+    content2_2 = new Waypoint({
+        element: document.getElementById('content-2-mobile'),
         handler: function(direction) {
             $(this.element).find('.paused').removeClass('paused').addClass('animate');
         },
