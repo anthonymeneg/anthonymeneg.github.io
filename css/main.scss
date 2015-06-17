@@ -23,12 +23,15 @@ nav {
     padding: 0 10px;
     position: fixed;
     right: 0;
+    text-align: center;
     top: 0;
     z-index: 1000;
 
-
     .hamburger {
-        margin: 10px 0 0 0;
+        float: left;
+        margin: 10px -43px 0 0;
+        width: 43px;
+
         .draw-path { @include animation-duration(0.5s) }
         .delay-1 { @include animation-delay(0.3s) }
         .delay-2 { @include animation-delay(0.6s) }
@@ -36,6 +39,16 @@ nav {
 
     .lang {
         float: right;
+    }
+
+    #logo {
+        display: inline-block;
+        margin: 5px 0;
+        @include transform(scale(0));
+        @include transition(transform 750ms ease-in-out);
+        &.active {
+            @include transform(scale(1));
+        }
     }
 }
 
@@ -87,9 +100,15 @@ nav {
     @include transform(rotate(90deg));
 }
 
+.visit {
+    line-height: 2em;
+    margin: 30px 0 0 0;
+}
+
 #content1 {
     background-image: url("/images/mountains.jpg");
     height: 100vh;
+    min-height: 55vw;
 
     h1 {
         font-weight: 400;
@@ -109,17 +128,15 @@ nav {
     }
 }
 
-#content2 {
-    background: #37c8ca;
-    padding: 30px 0 0 0;
-    line-height: 0;
-
+#content2, #content3 {
     h1 {
         font-weight: 400;
         line-height: 1.25em;
         font-size: 24px;
+        margin: 0 0 1em 0;
         text-align: center;
     }
+
     h2 {
         color: #175375;
         font-size: 28px;
@@ -127,12 +144,18 @@ nav {
         line-height: 1.15em;
         text-align: center;
     }
+
     .desc {
-        line-height: 1.15em;
+        line-height: 1.5em;
         margin: 20px 0;
         font-weight: 400;
         padding: 0 40px;
     }
+}
+
+#content2 {
+    background: #37c8ca;
+    line-height: 0;
 
     .mobile, .laptop, .desktop {
         position: relative;
@@ -166,7 +189,7 @@ nav {
 
         .screen {
             background-image: url("/images/askmen-iphone6-content.jpg");
-            bottom: 16%;
+            bottom: 15%;
             left: 15.7%;
             right: 15.7%;
             top: 21.1%;
@@ -189,7 +212,7 @@ nav {
 
         .screen {
             background-image: url("/images/askmen-macbook-content.jpg");
-            bottom: 17.3%;
+            bottom: 16%;
             left: 17.6%;
             right: 17.6%;
             top: 16.6%;
@@ -210,7 +233,7 @@ nav {
 
         .screen {
             background-image: url("/images/askmen-imac-content.jpg");
-            bottom: 32%;
+            bottom: 31%;
             left: 10%;
             right: 10%;
             top: 13%;
@@ -222,6 +245,7 @@ nav {
     }
 
     #content-2-mobile {
+        margin-top: 50px;
         .img {
             vertical-align: middle;
         }
@@ -236,14 +260,26 @@ nav {
             width: 20%;
         }
     }
-
-    .visit {
-        margin: 40px 0 0 0;
-    }
 }
 
 #content3 {
     background: #232323;
+    padding-bottom: 15%;
+
+    h2 {
+        color: #88bc08;
+    }
+
+    .mm-logo {
+        width: 30%;
+        margin-bottom: -11%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mm-1, .mm-2 {
+        width: 100%;
+    }
 }
 
 #content4 {
