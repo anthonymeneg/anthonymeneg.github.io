@@ -28,8 +28,8 @@
     </head>
     <body>
         <main>
-            <nav>
-                <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-4 -4 43 32">
+            <nav class="navigation">
+                <svg onclick="$('html').toggleClass('nav-open')" class="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-4 -4 43 32">
                     <path class="draw-path" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" stroke-linecap="square" stroke-dasharray="32" stroke-dashoffset="32" d="M0,0 L32,0" />
                     <path class="draw-path delay-1" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" stroke-linecap="square" stroke-dasharray="32" stroke-dashoffset="32" d="M0,12 L32,12" />
                     <path class="draw-path delay-2" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" stroke-linecap="square" stroke-dasharray="32" stroke-dashoffset="32" d="M0,24 L32,24" />
@@ -42,6 +42,11 @@
                 <!-- <div class="lang">
                     Fran&ccedil;ais
                 </div> -->
+                <ul>
+                    <li><a class="scrollTo" href="#portfolio">Portfolio</li>
+                    <li><a class="scrollTo" href="#passion">My Passion</li>
+                    <li><a class="scrollTo" href="#contact">Contact Me</li>
+                </ul>
             </nav>
             <div class="block" id="content1" data-stellar-background-ratio="0.5">
                 <div class="vcenter-outer">
@@ -63,11 +68,11 @@
                 </svg>
             </div>
             <div class="block" id="content2">
-                <h1>
-                    Work.
+                <h1 id="portfolio">
+                    Portfolio.
                 </h1>
                 <h2>
-                    Designer at AskMen
+                    AskMen.com
                 </h2>
                 <div class="line"></div>
                 <div class="desc">
@@ -114,8 +119,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 200" width="100%" class="separator">
                     <path fill="#50dcba" stroke-width="0" d="M0,201 L1282,0 L1282,201 Z"/>
                 </svg>
-                <h1>
-                    Passion.
+                <h1 id="passion">
+                    My Passion.
                 </h1>
                 <h2>
                     Food is Everything
@@ -147,8 +152,10 @@
                     <path fill="#4c0085" stroke-width="0" d="M0,201 L1282,0 L1282,201 Z"/>
                 </svg>
             </div>
-            <div class="block" id="content6" data-stellar-background-ratio="0.5">
-                
+            <div class="block" id="content5" data-stellar-background-ratio="0.5">
+                <h1 id="contact">Contact Me.</h1>
+                <h2>Anthony Meneghini-Cuvillier</h2>
+                <div class="line"></div>
             </div>
         </main>
         <script src="js/vendor.bundle.js"></script>

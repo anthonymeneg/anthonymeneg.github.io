@@ -1,5 +1,9 @@
 @import "vars";
 
+html.nav-open {
+    overflow: hidden;
+}
+
 body {
     background: #4d0285;
     color: #fff;
@@ -14,6 +18,10 @@ a, a:visited {
     text-decoration: none;
 }
 
+h1 {
+    font-weight: 400;
+}
+
 nav {
     background: rgba(77, 2, 133, 0.9);
     color: #fff;
@@ -25,9 +33,11 @@ nav {
     right: 0;
     text-align: center;
     top: 0;
+    @include transition(height 200ms);
     z-index: 1000;
 
     .hamburger {
+        cursor: pointer;
         float: left;
         margin: 10px -43px 0 0;
         width: 43px;
@@ -48,6 +58,37 @@ nav {
         @include transition(transform 750ms ease-in-out);
         &.active {
             @include transform(scale(1));
+        }
+    }
+
+    ul {
+        display: none;
+        list-style: none;
+        margin: 0 -10px;
+        padding: 0;
+
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            display: block;
+            font-size: 22px;
+            margin: 0 -10px;
+            @include transition(background 300ms);
+
+            &:hover {
+                background: #954dcf
+            }
+        }
+    }
+
+    .nav-open & {
+        height: 100%;
+
+        ul {
+            display: block;
         }
     }
 }
@@ -111,7 +152,6 @@ nav {
     min-height: 55vw;
 
     h1 {
-        font-weight: 400;
         font-size: 28px;
         margin: 10px 0;
         text-transform: uppercase;
@@ -128,9 +168,8 @@ nav {
     }
 }
 
-#content2, #content3 {
+#content2, #content3, #content5 {
     h1 {
-        font-weight: 400;
         line-height: 1.25em;
         font-size: 24px;
         margin: 0 0 1em 0;
@@ -287,10 +326,11 @@ nav {
 }
 
 #content5 {
-}
-
-#content6 {
     background-image: url("/images/mountains.jpg");
+
+    h2 {
+        color: #fff;
+    }
 }
 
 .draw-path {

@@ -28,6 +28,22 @@ $(function() {
         return false;
     });
 
+    $('.scrollTo').each(function() {
+        var $target = $(this);
+
+        $target.click(function() {
+            var offset = $('#' + $target.attr('href').substr(1)).offset();
+
+            $('html, body').stop().animate({
+                scrollTop: Math.max(0, offset.top - 55)
+            }, 1000, 'easeInOutCirc');
+
+            $('html').removeClass('nav-open');
+
+            return false;
+        });
+    });
+
     var content2_0 = new Waypoint({
         element: document.getElementById('content2'),
         handler: function(direction) {
