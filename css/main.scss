@@ -43,7 +43,7 @@ nav {
     .hamburger {
         cursor: pointer;
         float: left;
-        margin: 13px -32px 0 0;
+        margin: 13px -32px 0 5px;
         width: 32px;
 
         .draw-path { @include animation-duration(0.5s) }
