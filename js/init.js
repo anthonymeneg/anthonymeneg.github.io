@@ -54,7 +54,8 @@ $(function() {
             }
         },
         offset: '50%'
-    }), content2_1 = new Waypoint({
+    }),
+    content2_1 = new Waypoint({
         element: document.getElementById('content-2-animations'),
         handler: function(direction) {
             $(this.element).find('.paused').removeClass('paused').addClass('animate');
@@ -67,5 +68,19 @@ $(function() {
             $(this.element).find('.paused').removeClass('paused').addClass('animate');
         },
         offset: '80%'
+    }),
+    content3 = new Waypoint({
+        element: document.getElementById('content3'),
+        handler: function(direction) {
+            $(this.element).find('.paused').removeClass('paused').addClass('animate');
+        },
+        offset: '50%'
+    }),
+    content4 = new Waypoint({
+        element: document.getElementById('triangulation'),
+        handler: function(direction) {
+            $('#content4').find('.paused').removeClass('paused').addClass('animate');
+        },
+        offset: '0%'
     });
 });

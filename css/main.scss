@@ -76,15 +76,22 @@ nav {
             padding: 0;
         }
 
-        a {
+        .primary a {
             display: block;
-            font-size: 22px;
+            font-size: 24px;
+            font-weight: 600;
             margin: 0 -10px;
+            text-transform: uppercase;
             @include transition(background 300ms);
 
             &:hover {
                 background: #954dcf
             }
+        }
+
+        .secondary a {
+            font-size: 16px;
+            display: inline-block;
         }
     }
 
@@ -306,7 +313,7 @@ nav {
 }
 
 #content3 {
-    background: #232323;
+    background: #232227;
     padding-bottom: 15%;
 
     h2 {
@@ -327,7 +334,7 @@ nav {
 
 #content4 {
     background: #50dcba;
-    padding-bottom: 15%;
+    padding-bottom: 16%;
 
     h2 {
         color: #16735c;
@@ -347,14 +354,12 @@ nav {
 }
 
 #content5 {
-    background-image: url("/images/mountains.jpg");
+    background-color: #4c0085;
+    background-image: url("/images/surf.jpg");
+    @include background-size(cover);
 
     h1 {
         padding-top: 25%;
-    }
-
-    h2 {
-        color: #fff;
     }
 
     .line {
