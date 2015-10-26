@@ -234,7 +234,9 @@ nav {
         z-index: 10;
 
         @include respond-to(mobile) {
-            width: 200px;
+            max-width: 20%;
+            right: 0;
+            top: 0;
         }
 
         .screen {
@@ -257,7 +259,8 @@ nav {
         right: 10%;
 
         @include respond-to(mobile) {
-            width: 200px;
+            max-width: 70%;
+            right: 0;
         }
 
         .screen {
@@ -278,7 +281,8 @@ nav {
         left: 7%;
 
         @include respond-to(mobile) {
-            max-width: 200px;
+            max-width: 70%;
+            left: 0;
         }
 
         .screen {
@@ -288,9 +292,6 @@ nav {
             right: 10%;
             top: 13%;
 
-            @include respond-to(mobile) {
-                right: 15.7%;
-            }
         }
     }
 
@@ -354,12 +355,15 @@ nav {
 }
 
 #content5 {
-    background-color: #4c0085;
-    background-image: url("/images/surf.jpg");
+    background: #4c0085 url("/images/surf.jpg") center top;
     @include background-size(cover);
 
     h1 {
         padding-top: 25%;
+
+        @include respond-to(mobile) {
+            padding-top: 50%;
+        }
     }
 
     .line {
