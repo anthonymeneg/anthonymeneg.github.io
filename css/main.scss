@@ -116,7 +116,6 @@ nav {
     min-height: 100vh;
     position: relative;
     text-align: center;
-    z-index: 1;
 }
 
 .vcenter-outer {
@@ -159,9 +158,13 @@ nav {
 }
 
 #content1 {
-    background: url("/images/mountains.jpg") center center;
+    background-image: url("/images/mountains.jpg");
     height: 100vh;
     min-height: 55vw;
+
+    @media screen and (min-width: 1025px) {
+        background-image: url("/images/mountains@2x.jpg");        
+    }
 
     h1 {
         font-size: 28px;
@@ -201,12 +204,27 @@ nav {
         margin: 20px 0;
         font-weight: 400;
         padding: 0 40px;
+
+        a {
+            &:hover {
+                border-bottom: 1px solid #fff;
+            }
+        }
     }
 }
 
 #content2 {
     background: #37c8ca;
     line-height: 0;
+
+    h2 {
+        font-size: 220%;
+        margin: 20px;
+    }
+
+    .line.secondary {
+        margin-top: 75px;
+    }
 
     .mobile, .laptop, .desktop {
         position: relative;
@@ -356,7 +374,7 @@ nav {
 }
 
 #content5 {
-    background: #4c0085 url("/images/surf.jpg") center top;
+    background-image: url("/images/surf.jpg");
 
     h1 {
         padding-top: 25%;
@@ -384,15 +402,15 @@ nav {
             color: #4d0285;
         }
     }
+}
 
-    .links {
-        a {
-            border-bottom: 1px solid transparent;
-            @include transition(border-bottom-color 0.5s);
+.links {
+    a {
+        border-bottom: 1px solid transparent;
+        @include transition(border-bottom-color 0.5s);
 
-            &:hover {
-                border-bottom-color: #fff;
-            }
+        &:hover {
+            border-bottom-color: #fff;
         }
     }
 }
