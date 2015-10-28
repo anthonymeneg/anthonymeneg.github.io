@@ -112,10 +112,11 @@ nav {
 
 .block {
     background-attachment: fixed;
-    background-size: cover;
+    @include background-size(cover);
     min-height: 100vh;
     position: relative;
     text-align: center;
+    z-index: 1;
 }
 
 .vcenter-outer {
@@ -158,7 +159,7 @@ nav {
 }
 
 #content1 {
-    background-image: url("/images/mountains.jpg");
+    background: url("/images/mountains.jpg") center center;
     height: 100vh;
     min-height: 55vw;
 
@@ -356,7 +357,6 @@ nav {
 
 #content5 {
     background: #4c0085 url("/images/surf.jpg") center top;
-    @include background-size(cover);
 
     h1 {
         padding-top: 25%;
