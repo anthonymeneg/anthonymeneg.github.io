@@ -67,7 +67,7 @@ $(function() {
         handler: function(direction) {
             $(this.element).find('.paused').removeClass('paused').addClass('animate');
         },
-        offset: '50%'
+        offset: '80%'
     }),
     content3 = new Waypoint({
         element: document.getElementById('content3'),
@@ -81,6 +81,6 @@ $(function() {
         handler: function(direction) {
             $('#content4').find('.paused').removeClass('paused').addClass('animate');
         },
-        offset: '0%'
+        offset: '50%'
     });
 });
