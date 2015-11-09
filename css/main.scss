@@ -1,11 +1,9 @@
 @import "vars";
+@import "webfonts/ss-social-circle";
 
 /*
-- Move MM logo above image on mobile and make bigger (~200%)
-- Crop horizontally the MM image by 20%
-- Update menu links and replace social icons
-- Put posters next to each other on mobile
-- Fix backgrounds on iPhone 4
+- Replace hamburger with menu close button (X)
+- Fix content backgrounds on iPhone 4
 - Stop scroll when menu is open
 */
 
@@ -87,6 +85,8 @@ nav {
             padding: 0;
         }
 
+        $hover-color: #954dcf;
+
         .primary a {
             display: block;
             font-size: 24px;
@@ -96,13 +96,19 @@ nav {
             @include transition(background 300ms);
 
             &:hover {
-                background: #954dcf
+                background: $hover-color;
             }
         }
 
         .secondary a {
-            font-size: 16px;
             display: inline-block;
+            font-size: 24px;
+            margin: 0 5px;
+            @include transition(all 350ms);
+
+            &:hover {
+                transform: scale(1.25);
+            }
         }
     }
 
@@ -361,6 +367,11 @@ nav {
         margin-bottom: -11%;
         position: relative;
         z-index: 2;
+
+        @include respond-to(mobile) {
+            margin-bottom: 10px;
+            width: 60%;
+        }
     }
 
     .mm-1, .mm-2 {
@@ -380,8 +391,8 @@ nav {
         color: #16735c;
     }
 
-    img {
-        width: 100%;        
+    img { 
+        width: 100%;
     }
 
     .book1 {
@@ -390,6 +401,7 @@ nav {
 
     .book2, .book3 {
         max-width: 360px;
+        width: 48%;
     }
 }
 
