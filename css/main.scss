@@ -1,5 +1,5 @@
 @import "vars";
-@import "webfonts/ss-social-circle";
+@import "webfonts/ss-social-regular";
 
 /*
 - Replace hamburger with menu close button (X)
@@ -410,6 +410,7 @@ nav {
 
     h1 {
         padding-top: 25%;
+        margin: 0;
 
         @include respond-to(mobile) {
             padding-top: 50%;
@@ -425,13 +426,24 @@ nav {
         display: inline-block;
         @include border-radius(8px);
         font-size: 20px;
-        margin-bottom: 30px;
+        margin: 30px 0;
         padding: 10px 20px;
         @include transition(background 0.5s, color 0.5s);
 
         &:hover {
             background: #fff;
             color: #4d0285;
+        }
+    }
+
+    .external a {
+        display: inline-block;
+        font-size: 24px;
+        margin: 0 5px;
+        @include transition(all 350ms);
+
+        &:hover {
+            transform: scale(1.25);
         }
     }
 }
