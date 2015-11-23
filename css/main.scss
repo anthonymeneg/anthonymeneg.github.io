@@ -374,6 +374,10 @@ nav {
     background: #232227;
     padding-bottom: 15%;
 
+    .separator {
+        bottom: -1px;
+    }
+
     h2 {
         color: #88bc08;
     }
