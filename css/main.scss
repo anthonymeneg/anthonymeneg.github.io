@@ -103,8 +103,8 @@ nav {
 
         .secondary a {
             display: inline-block;
-            font-size: 24px;
-            margin: 0 5px;
+            font-size: 20px;
+            margin: 0 8px;
             @include transition(all 350ms);
 
             &:hover {
@@ -275,8 +275,20 @@ nav {
         top: 70px;
         z-index: 10;
 
+        &.mobile-2 {
+            display: none;
+        }
+
         @include respond-to(mobile) {
-            max-width: 20%;
+            &.mobile-1 {
+                display: none;
+            }
+            &.mobile-2 {
+                display: block;
+            }
+
+            display: block;
+            max-width: 60%;
             right: 0;
             top: 0;
         }
@@ -301,6 +313,8 @@ nav {
         right: 10%;
 
         @include respond-to(mobile) {
+            bottom: 0;
+            margin-bottom: 40px;
             max-width: 70%;
             right: 0;
         }
@@ -323,6 +337,7 @@ nav {
         left: 7%;
 
         @include respond-to(mobile) {
+            margin-bottom: 40px;
             max-width: 70%;
             left: 0;
         }
@@ -439,8 +454,8 @@ nav {
 
     .external a {
         display: inline-block;
-        font-size: 24px;
-        margin: 0 5px;
+        font-size: 20px;
+        margin: 0 8px;
         @include transition(all 350ms);
 
         &:hover {
